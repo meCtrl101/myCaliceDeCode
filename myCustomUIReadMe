@@ -1,0 +1,234 @@
+<!-- Small msAccess RibbonInterface in xml -->
+<!-- tableName USysRibbons, prKey fieldName RibbonName value customUI as text, fieldName RibbonXML value "This here file" as memo -->
+<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+   <ribbon startFromScratch="false">
+      <tabs>
+         <tab idMso="TabHomeAccess" visible="false"/>
+         <tab idMso="TabCreate" visible="false"/>
+         <tab idMso="TabDatabaseTools" visible="false"/>
+         <tab idMso="TabExternalData" visible="false"/>
+         <tab idMso="TabSourceControl" visible="false"/>
+         <tab id="tab0" label="Editor" visible="true">
+            <group id="group0" visible="true" label="Project managment">
+               <button id="button0" visible="true" enabled="true" size="large" label="Manage project" imageMso="TableListPermissions" onAction="onOpenFrm" tag="projectFollowUp"/>
+               <button id="button1" visible="true" enabled="true" size="large" label="Manage project" imageMso="CreateReport" onAction="onOpenRpt" tag="projectFollowUpReport"/>
+            </group>
+            <group id="group10" visible="true" label="Fixed tables and record sets">
+               <button id="button10" visible="true" enabled="true" size="large" label="Project tables" imageMso="AdpDiagramArrangeTables" onAction="onOpenFrm" tag="tableNames"/>
+               <button id="button11" visible="true" enabled="true" size="large" label="Project recordSet" imageMso="FieldList" onAction="onOpenFrm" tag="tableName"/>
+               <separator id="separator10"/>
+               <menu id="menu10" visible="true" enabled="true" size="large" itemSize="large" label="Project reports" imageMso="CreateReport">
+                  <button id="button12" visible="true" enabled="true" label="Project table names report" imageMso="CreateReport" onAction="onOpenRpt" tag="tableNamesReport"/>
+                  <menuSeparator id="menuSeparator10"/>
+                  <button id="button13" visible="true" enabled="true" label="Project record sets report" imageMso="CreateReport" onAction="onOpenRpt" tag="tableNameReport"/>
+               </menu>
+            </group>
+            <group id="group20" visible="true" label="msAccess table and record sets">
+               <button id="button20" visible="true" enabled="true" size="large" label="msAccess USysRibbons" imageMso="RelationshipsEditRelationships" onAction="onOpenFrm" tag="xmlEditorRibbon1"/>
+               <button id="button22" visible="true" enabled="true" size="large" label="Test new msAccess ribbon" imageMso="CreateForm" onAction="onOpenFrm" tag="testForm"/>
+               <separator id="separator30"/>
+               <button id="button21" visible="true" enabled="true" size="large" label="USysRibbons report" imageMso="CreateReport" onAction="onOpenRpt" tag="xmlEditorRibbonReport"/>
+            </group>
+            <group id="group30" visible="true" label="Design tools">
+               <control idMso="FileCompactAndRepairDatabase" size="large" label="Compact and repair links for tests"/>
+               <separator id="separator31"/>
+               <button id="button30" visible="true" enabled="true" size="large" label="xml Control Picker" imageMso="PasteDuplicate" onAction="onOpenFrm" tag="xmlControlPicker"/>
+               <button id="button31" visible="true" enabled="true" size="large" label="msOffice Picker" imageMso="ReplicationCreateReplica" onAction="onOpenFrm" tag="msOfficeAllPicker"/>
+               <button id="button32" visible="true" enabled="true" size="large" label="SQL Control Picker" imageMso="PasteDuplicate" onAction="onOpenFrm" tag="ddlQueryForm"/>
+            </group>
+            <group id="group40" visible="true" label="Export msAccess table and record sets">
+               <button id="button40" visible="true" enabled="true" size="large" label="Edit msAccess table" imageMso="RelationshipsEditRelationships" onAction="onOpenFrm" tag="export"/>
+               <button id="button41" visible="true" enabled="true" size="large" label="Export msAccess table"  imageMso="ExportAccess" onAction="onExportTbl" tag="export"/>
+               <separator id="separator40"/>
+               <button id="button42" visible="true" enabled="true" size="large" label="msAccess table report" imageMso="CreateReport" onAction="onOpenRpt" tag="exportTableReport"/>
+            </group>
+            <group id="group35" visible="true" label="Open storage table">
+               <button id="button34" visible="true" enabled="true" size="large" label="Open storage table" imageMso="RelationshipsEditRelationships" onAction="onOpenFrm" tag="storageFrm"/>
+               <button id="button35" visible="true" enabled="true" size="large" label="Open storage report" imageMso="CreateReport" onAction="onOpenRpt" tag="storageReport"/>
+            </group>
+            <group id="group50" visible="true" label="Quit and save">
+               <button id="button50" visible="true" enabled="true" size="large" label="Quit And Save" imageMso="PrintPreviewClose" onAction="onQuit"/>
+               <separator id="separator50"/>
+               <button id="button51" visible="true" enabled="true" size="normal" label="Help" imageMso="Help" onAction="onOpenFrm" tag="help"/>
+               <button id="button52" visible="true" enabled="true" size="normal" label="Help" imageMso="CreateReport" onAction="onOpenRpt" tag="helpReport"/>
+               <button id="button53" visible="true" enabled="true" size="normal" label="About  author" imageMso="CreateEmail" onAction="onOpenFrm" tag="presentation"/>
+            </group>
+         </tab>
+         <tab id="tab60" label="Settings" visible="true">
+            <group id="group60" label="msOffice">
+               <menu id="menu60" visible="true" enabled="true" size="large" itemSize="large" label="xmlSchema" imageMso="ImportXmlFile">
+                  <button id="button60" visible="true" enabled="true" label="msOffice elements" imageMso="CreateForm" onAction="onOpenFrm" tag="msOfficeElements"/>
+                  <button id="button61" visible="true" enabled="true" label="msOffice attributs" imageMso="CreateForm" onAction="onOpenFrm" tag="msOfficeAttributs"/>
+                  <button id="button62" visible="true" enabled="true" label="msOffice values" imageMso="CreateForm" onAction="onOpenFrm" tag="msOfficeValues"/>
+                  <button id="button63" visible="true" enabled="true" label="msOffice callBacks" imageMso="CreateForm" onAction="onOpenFrm" tag="msOfficeCallBacks"/>
+                  <button id="button64" visible="true" enabled="true" label="msOffice types" imageMso="CreateForm" onAction="onOpenFrm" tag="msOfficeTypes"/>
+                  <button id="button65" visible="true" enabled="true" label="msOffice groups" imageMso="CreateForm" onAction="onOpenFrm" tag="msOfficeGroups"/>
+               </menu>
+            </group>
+            <group id="group70" label="xml lists">
+               <button id="button70" visible="true" enabled="true" size="normal" label="Xml Caracters" imageMso="ExportXmlFile" onAction="onOpenFrm" tag="xmlCaracters"/>
+               <button id="button71" visible="true" enabled="true" size="normal" label="Xml msOffice" imageMso="ExportXmlFile" onAction="onOpenFrm" tag="xmlGeneral"/>
+               <button id="button72" visible="true" enabled="true" size="normal" label="Xml sentences" imageMso="ExportXmlFile" onAction="onOpenFrm" tag="xmlEmptyCaracters"/>
+            </group>
+            <group id="group75" label="Sql statement and queryDef">
+               <button id="button74" visible="true" enabled="true" size="normal" label="Sql caracters" imageMso="ExportXmlFile" onAction="onOpenFrm" tag="sqlCaracters"/>
+               <button id="button75" visible="true" enabled="true" size="normal" label="All sql statement" imageMso="ExportXmlFile" onAction="onOpenFrm" tag="allSqlStatement"/>
+               <button id="button76" visible="true" enabled="true" size="normal" label="Sql strings" imageMso="ExportXmlFile" onAction="onOpenFrm" tag="sqlStrings"/>
+               <separator id="separator75"/>
+               <button id="button77" visible="true" enabled="true" size="normal" label="msAccess functions for Sql" imageMso="ExportXmlFile" onAction="onOpenFrm" tag="acReservedWords"/>
+               <button id="button78" visible="true" enabled="true" size="normal" label="All functions" imageMso="ExportXmlFile" onAction="onOpenFrm" tag="allFunctions"/>
+               <button id="button79" visible="true" enabled="true" size="normal" label="Sql control picker" imageMso="ExportXmlFile" onAction="onOpenFrm" tag="acSQLControlPicker"/>
+            </group>
+            <group id="group80" label="xmlEditor password">
+               <button id="button80" visible="true" enabled="true" size="large" label="Password settings" imageMso="WindowsArrangeIcons" onAction="password" tag="passwordSettings acForm"/>
+               <separator id="separator80"/>
+               <button id="button81" visible="true" enabled="true" size="large" label="xmlEditor customUI" imageMso="RelationshipsEditRelationships" onAction="password" tag="xmlEditorRibbon acForm"/>
+            </group>
+            <group id="group85" label="Path, directory, application and file">
+               <button id="button82" visible="true" enabled="true" size="large" label="Application type" imageMso="FileOpenDatabase" onAction="onOpenFrm" tag="applicationType"/>
+               <separator id="separator82"/>
+               <button id="button83" visible="true" enabled="true" size="normal" label="Application path" imageMso="FileOpenDatabase" onAction="onOpenFrm" tag="applicationPath"/>
+               <button id="button84" visible="true" enabled="true" size="normal" label="Application name" imageMso="FileOpenDatabase" onAction="onOpenFrm" tag="applicationName"/>
+               <button id="button85" visible="true" enabled="true" size="normal" label="Full application path" imageMso="FileOpenDatabase" onAction="onOpenFrm" tag="appAssociation"/>
+            </group>
+            <group id="group90" visible="true" label="Quit and save">
+               <button id="button90" visible="true" enabled="true" size="large" label="Quit And Save" imageMso="PrintPreviewClose" onAction="onQuit"/>
+               <separator id="separator90"/>
+               <button id="button91" visible="true" enabled="true" size="normal" label="Help" imageMso="Help" onAction="onOpenFrm" tag="help"/>
+               <button id="button92" visible="true" enabled="true" size="normal" label="Help" imageMso="CreateReport" onAction="onOpenRpt" tag="helpReport"/>
+               <button id="button93" visible="true" enabled="true" size="normal" label="About  author" imageMso="CreateEmail" onAction="onOpenFrm" tag="presentation"/>
+            </group>
+         </tab>
+         <tab id="tab14" label="Add design" visible="true">
+            <group id="group214" label="Formating options">
+               <button id="button104" visible="true" enabled="true" size="large" label="Picture table" imageMso="CreateTable" onAction="onOpenFrm" tag="frmPictureFrm"/>
+               <separator id="separator44"/>
+               <button id="button114" visible="true" enabled="true" size="large" label="Picture format your forms" imageMso="CreateForm" onAction="onOpenFrm" tag="frmNameID"/>
+               <separator id="separator34"/>
+               <button id="button644" visible="true" enabled="true" size="large" label="RGB imager" imageMso="CreateMacro" onAction="onOpenFrm" tag="rgbImager"/>
+               <separator id="separator3554"/>
+               <button id="button6454" visible="true" enabled="true" size="large" label="Change labels" imageMso="CreateEmail" onAction="onOpenFrm" tag="labelChange"/>
+            </group>
+            <group id="group234" label="Create your new database table collection">
+               <button id="button194" visible="true" enabled="true" size="large" label="Table categories" imageMso="CreateTable" onAction="onOpenFrm" tag="tableCategory"/>
+               <separator id="separator414"/>
+               <button id="button204" visible="true" enabled="true" size="large" label="Table names" imageMso="CreateTableInDesignView" onAction="onOpenFrm" tag="tableList"/>
+               <separator id="separator314"/>
+               <button id="button614" visible="true" enabled="true" size="large" label="Make your tables" imageMso="CreateTableInDesignView" onAction="onOpenFrm" tag="tableListBloc"/>
+            </group>
+            <group id="group244" label="Create your new database form collection">
+               <button id="button214" visible="true" enabled="true" size="large" label="Form categories" imageMso="CreateForm" onAction="onOpenFrm" tag="formCategory"/>
+               <separator id="separator514"/>
+               <button id="button224" visible="true" enabled="true" size="large" label="Form names" imageMso="CreateFormInDesignView" onAction="onOpenFrm" tag="formList"/>
+               <separator id="separator614"/>
+               <button id="button624" visible="true" enabled="true" size="large" label="Make your forms" imageMso="CreateFormInDesignView" onAction="onOpenFrm" tag="formListBloc"/>
+            </group>
+            <group id="group254" label="Set categories, groups, sort lists">
+               <button id="button314" visible="true" enabled="true" size="large" label="Set  all categories" imageMso="CreateForm" onAction="onOpenFrm" tag="cnktGrpCat"/>
+               <separator id="separator624"/>
+               <button id="button324" visible="true" enabled="true" size="large" label="Set groups" imageMso="CreateFormInDesignView" onAction="onOpenFrm" tag="cnktGrpCatGrp"/>
+               <separator id="separator1624"/>
+               <button id="button1324" visible="true" enabled="true" size="large" label="Sort lists" imageMso="CreateFormInDesignView" onAction="onOpenFrm" tag="sortSupport"/>
+            </group>
+            <group id="group264" label="Contacts">
+               <button id="button524" visible="true" enabled="true" size="large" label="Contact categories" imageMso="CreateTableInDesignView" onAction="onOpenFrm" tag="contactCat"/>
+               <separator id="separator634"/>
+               <button id="button334" visible="true" enabled="true" size="large" label="Contacts" imageMso="CreateTable" onAction="onOpenFrm" tag="contact"/>
+               <separator id="separator654"/>
+               <button id="button354" visible="true" enabled="true" size="large" label="Ressources" imageMso="CreateEmail" onAction="onOpenFrm" tag="cntkResType"/>
+            </group>
+            <group id="group568" label="Code design">
+               <button id="button584" visible="true" enabled="true" size="large" label="Setup lists" imageMso="CreateTableInDesignView" onAction="onOpenFrm" tag="concatHeaders"/>
+               <separator id="separator694"/>
+               <button id="button784" visible="true" enabled="true" size="large" label="Concatenate" imageMso="CreateTable" onAction="onOpenFrm" tag="Concatenate"/>
+               <separator id="separator665"/>
+               <button id="button585" visible="true" enabled="true" size="large" label="popUp codes" imageMso="CreateEmail" onAction="onOpenFrm" tag="popUpMenuForm"/>
+            </group>
+            <group id="group224" label="Quit and save">
+               <button id="button744" visible="true" enabled="true" size="large" label="Quit And Save" imageMso="PrintPreviewClose" onAction="onQuit"/>
+            </group>
+         </tab>
+         <tab id="tab100" label="Data work" visible="true">
+            <group idMso="GroupMacro" visible="true"/>
+            <group idMso="GroupClipboard" visible="true"/>
+            <group idMso="GroupExport" visible="true"/>
+            <group idMso="GroupImport" visible="true"/>
+            <group idMso="GroupDatabaseTools" visible="true"/>
+            <group idMso="GroupCreateOther" visible="true"/>
+         </tab>
+         <tab id="tab200" label="Creation work" visible="true">
+            <group idMso="GroupMacro" visible="true"/>
+            <group idMso="GroupViewsShowHide" visible="true"/>
+            <group idMso="GroupCreateForms" visible="true"/>
+            <group idMso="GroupCreateReports" visible="true"/>
+            <group idMso="GroupCreateTables" visible="true"/>
+            <group idMso="GroupCreateOther" visible="true"/>
+         </tab>
+         <tab id="tab1000" label="Form design" visible="true">
+            <group idMso="GroupViews" visible="true"/>
+            <group idMso="GroupFontAccess" visible="true"/>
+            <group idMso="GroupFormattingGridlines" visible="true"/>
+            <group idMso="GroupControlsAccess" visible="true"/>
+            <group idMso="GroupToolsAccess" visible="true"/> 
+         </tab>
+         <tab id="tab1100" label="Form arrange" visible="true">
+            <group idMso="GroupAutoFormatAccess" visible="true"/>
+            <group idMso="GroupMarginsAndPaddingControlLayout" visible="true"/>
+            <group idMso="GroupControlAlignmentLayout" visible="true"/>
+           <group idMso="GroupSizeAndPosition" visible="true"/>
+           <group idMso="GroupPosition" visible="true"/>
+           <group idMso="GroupLayoutShowHide" visible="true"/>
+         </tab>
+       </tabs>
+   </ribbon>
+</customUI>
+
+<!-- The following code is at module level and is in Visual Basic for application, VBA -->
+<!-- Access and Office Library -->
+
+<summary>
+Option Compare Database
+
+Public myRibbon As IRibbonUI
+
+Public Sub onLoadAddIn(ribbon As IRibbonUI)
+    Set myRibbon = ribbon
+End Sub
+
+Public Function onQuit(control As IRibbonControl)
+    Access.DoCmd.Quit acQuitSaveAll
+End Function
+
+Public Function onExportTbl(control As IRibbonControl)
+    Access.DoCmd.OpenTable control.Tag, , acReadOnly
+    Access.DoCmd.RunCommand acCmdExportAccess
+    Access.DoCmd.Close acTable, control.Tag
+End Function
+
+Public Function onOpenFrm(control As IRibbonControl)
+    Access.DoCmd.OpenForm control.Tag
+End Function
+
+Public Function onOpenRpt(control As IRibbonControl)
+    Access.DoCmd.OpenReport control.Tag, acViewPreview
+End Function
+
+Public Function onRunCode(control As IRibbonControl)
+    Access.Application.Run control.Tag
+End Function
+
+Public Function refreshAllRibbon()
+    If (Not myRibbon Is Nothing) Then
+        myRibbon.Invalidate
+        myRibbon.Refresh
+    End If
+End Function
+
+Public Function refreshRibbonControl(control As IRibbonControl)
+    If (Not myRibbon Is Nothing) Then
+        myRibbon.InvalidateControl control.Id
+    End If
+End Function
+</summary>
+
